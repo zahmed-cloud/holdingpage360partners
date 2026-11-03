@@ -87,76 +87,77 @@
     </style>
 </head>
 
-<body class="bg-[#f8faff] text-slate-900 overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
-
-    <!-- Ambient Background -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <!-- Top Left: Soft Peach/Yellow -->
-        <div
-            class="absolute top-[-10%] left-[-10%] w-[70vw] h-[70vw] bg-[#fff1eb]/60 rounded-full blur-3xl animate-blob">
-        </div>
-
-        <!-- Top Right: Mint Green -->
-        <div
-            class="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-[#e0fff4]/50 rounded-full blur-3xl animate-blob animation-delay-2000">
-        </div>
-
-        <!-- Bottom Left: Lavender/Pink -->
-        <div
-            class="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-[#fce7f3]/50 rounded-full blur-3xl animate-blob animation-delay-4000">
-        </div>
-
-        <!-- Center/Floating: Soft Blue mix -->
-        <div
-            class="absolute top-[40%] left-[40%] w-[50vw] h-[50vw] bg-[#eef2ff]/60 rounded-full blur-3xl animate-blob animation-delay-4000">
-        </div>
-    </div>
+<body class="bg-white text-slate-900 overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
 
     <!-- Header -->
-    <header
-        class="absolute py-8 md:py-12 left-0 w-full px-6 md:px-16 z-[100] flex justify-between md:justify-center items-center gap-3">
-        <div class="logo-container animate-[reveal_1s_ease-out_forwards] md:absolute md:left-16">
-            <!-- Updated: MAXIMUM Size as requested (h-32 on desktop) + Shadow for "sundor" look -->
-            <img src="Logo - black background.png" alt="360 Partners"
-                class="h-20 md:h-36 w-auto opacity-100 drop-shadow-sm hover:scale-105 transition-transform duration-300">
+    <header class="absolute top-0 left-0 w-full z-[100] px-6 md:px-16 py-6 md:py-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
+            <div class="logo-container animate-[reveal_1s_ease-out_forwards]">
+                <img src="logo-white.png" alt="360 Partners" class="h-7 md:h-9 w-auto">
+            </div>
+            <p
+                class="text-xs md:text-base font-medium tracking-[0.2em] text-white uppercase animate-[reveal_1s_ease-out_forwards]">
+                New site coming soon
+            </p>
         </div>
-        <p
-            class="text-[10px] sm:text-xs md:text-xl font-bold tracking-[0.1em] md:tracking-[0.2em] text-[#17263d] uppercase animate-[reveal_1s_ease-out_forwards] md:mt-0 text-right">
-            New Site In Development
-        </p>
     </header>
 
     <!-- Confetti Container -->
     <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div>
 
-    <!-- Hero Section (Torre Style: White BG, No Card) -->
-    <section id="hero" class="relative z-10 min-h-screen flex items-center justify-center p-4 md:p-12 bg-white">
-        <!-- Logo Container (Moved inside relative flow or keeping resizing logic) -->
-        <!-- Actually, user asked for logo at top. Header handles that. This section handles hero content. -->
-        <div class="w-full max-w-7xl px-6 md:p-24 flex flex-col items-center text-center relative pt-32 md:pt-32">
+    <!-- Hero Section -->
+    <section id="hero"
+        class="relative z-10 min-h-[100svh] flex items-center overflow-hidden bg-[#0B1C2E] px-6 md:px-16 pt-28 md:pt-32 pb-16 md:pb-20">
+        <!-- Photo: Dubai skyline (Pexels, free commercial use) -->
+        <div class="absolute inset-0 hidden md:block bg-cover bg-[position:70%_bottom]"
+            style="background-image:url('hero-dubai.jpg')"></div>
+        <div class="absolute inset-0 md:hidden bg-cover bg-bottom" style="background-image:url('hero-dubai-mobile.jpg')">
+        </div>
+        <!-- Shading so the words read cleanly -->
+        <div class="absolute inset-0 hidden md:block"
+            style="background:linear-gradient(90deg,rgba(11,28,46,.88) 0%,rgba(11,28,46,.72) 35%,rgba(11,28,46,.25) 62%,rgba(11,28,46,0) 80%)">
+        </div>
+        <div class="absolute inset-0 md:hidden"
+            style="background:linear-gradient(180deg,rgba(11,28,46,.55) 0%,rgba(11,28,46,.7) 55%,rgba(11,28,46,.45) 100%)">
+        </div>
+        <div class="absolute inset-x-0 top-0 h-28" style="background:linear-gradient(180deg,rgba(11,28,46,.35),rgba(11,28,46,0))"></div>
 
-            <!-- Hero Content -->
-            <div class="relative z-10 max-w-5xl py-16 md:py-24 mx-auto flex flex-col items-center hero-content">
-
+        <div class="relative w-full max-w-7xl mx-auto hero-content">
+            <div class="max-w-3xl">
+                <!-- Above the headline -->
+                <p
+                    class="text-white/85 font-medium text-xs sm:text-sm md:text-base tracking-[0.22em] uppercase mb-6 md:mb-[3.5vh] animate-[reveal_1s_ease-out_0.1s_forwards]">
+                    Executive Search for banks, investment firms and fintechs
+                </p>
 
                 <!-- Main Headline -->
                 <h1
-                    class="text-4xl md:text-6xl lg:text-7xl tracking-tight mb-8 leading-tight text-[#060645] uppercase animate-[reveal_1s_ease-out_0.2s_forwards]">
-                    Elite <span class="font-extrabold block md:inline">Fractional And</span> <span
-                        class="font-extrabold block md:inline">Full-Time </span>Talent
+                    class="font-serif text-white text-[3.6rem] sm:text-7xl md:text-[clamp(4.5rem,13vh,8.5rem)] leading-[1] md:leading-[0.95] tracking-[-0.02em] mb-8 md:mb-[4.5vh] animate-[reveal_1s_ease-out_0.2s_forwards]">
+                    Shaping <br><span class="italic">The Future</span>
                 </h1>
 
-                <!-- Subtext -->
+                <!-- Sub-line -->
                 <h2
-                    class="text-xl md:text-2xl  text-[#060645]  max-w-3xl leading-relaxed mb-12 animate-[reveal_1s_ease-out_0.4s_forwards]">
-                    360Partners connects high-growth businesses with exceptional fractional and full-time professionals
-                    across operations, finance, technology, and strategy.
+                    class="text-white/80 text-lg md:text-xl lg:text-[1.35rem] font-light leading-relaxed max-w-[42rem] [text-wrap:pretty] mb-10 md:mb-[5vh] animate-[reveal_1s_ease-out_0.3s_forwards]">
+                    We place CEOs, <span class="whitespace-nowrap">C-suite</span>, senior leaders, and build full
+                    digital teams. We help banks, investment firms and growing businesses hire <span
+                        class="whitespace-nowrap">C-suite</span> and senior leaders, and build whole teams around them.
                 </h2>
 
-                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
-                    class="hero-btn group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold text-white uppercase tracking-widest transition-all duration-200 bg-[#2FB7A6] hover:bg-[#2fb7a6] hover:shadow-lg hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E31C5F] animate-[reveal_1s_ease-out_0.6s_forwards]">
-                    Contact Us
-                </button>
+                <!-- Button + UK / UAE -->
+                <div
+                    class="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 animate-[reveal_1s_ease-out_0.4s_forwards]">
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                        class="hero-btn group self-start inline-flex items-center gap-3 px-8 py-4 text-xs font-semibold text-[#0B1C2E] uppercase tracking-[0.2em] bg-white hover:bg-[#2FB7A6] hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0B1C2E] focus:ring-white">
+                        Talk to us
+                        <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </button>
+                    <div class="sm:border-l sm:border-white/30 sm:pl-8">
+                        <p class="text-[11px] md:text-xs font-semibold tracking-[0.2em] uppercase text-white/85 leading-loose">
+                            Executive Search<br>Across the UK and UAE
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -181,8 +182,8 @@
                 <!-- Headline -->
                 <div class="mb-5 md:mb-10 relative text-center md:text-left">
                     <h2
-                        class="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white uppercase tracking-wider leading-[1.2] md:leading-[1.1] font-display font-light">
-                        Putting <span class="font-bold">Expertise</span> At The Centre
+                        class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-[-0.01em]">
+                        Meet the <span class="italic text-[#5ECFB1]">Founder</span>
                     </h2>
                 </div>
 
@@ -194,7 +195,7 @@
 
                     <!-- Image -->
                     <div class="relative w-[220px] md:w-[380px] flex-shrink-0">
-                        <img src="Untitled design.png" alt="Abbie Bowtell"
+                        <img src="abbie-bowtell.png" alt="Abbie Bowtell"
                             class="w-full h-auto object-contain drop-shadow-2xl">
                     </div>
 
@@ -232,179 +233,124 @@
                 </p>
 
                 <p class="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed">
-                    She founded <strong class="text-white">360Partners</strong> to give executives flexible access to
-                    exceptional talent - experienced professionals who integrate quickly and deliver from day one.
+                    Today Abbie is directly involved in every search. We map the whole market, including people who
+                    aren't looking, assess candidates against what the role must deliver in its first year, and handle
+                    every appointment with complete discretion.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Trusted By Section -->
-    <section id="trusted-by" class="relative z-10 py-16 overflow-hidden">
-        <p class="text-center text-sm font-bold text-slate-400 tracking-[0.2em] uppercase mb-12">Trusted by Executives
-            From</p>
-
+    <section id="trusted-by" class="relative z-10 bg-white py-16 md:py-20 px-6 md:px-16 border-b border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-xs md:text-sm font-semibold text-[#0B1C2E]/60 tracking-[0.22em] uppercase mb-10 md:mb-12">
+                Trusted by Executives From</p>
+        </div>
         <div class="relative w-full max-w-7xl mx-auto mask-gradient">
-            <div
-                class="flex gap-16 md:gap-24 animate-[scroll_30s_linear_infinite] w-max items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <!-- Logos (Set 1) -->
-                <img src="https://placehold.co/180x50/transparent/1e293b?text=Goldman+Sachs&font=serif"
-                    alt="Goldman Sachs" class="h-16 md:h-16 w-auto object-contain">
-                <img src="https://placehold.co/100x50/transparent/1e293b?text=20VC&font=montserrat" alt="20VC"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/180x50/transparent/1e293b?text=J.P.+Morgan&font=serif" alt="JP Morgan"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Google&font=roboto" alt="Google"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Amazon&font=lato" alt="Amazon"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/140x50/transparent/1e293b?text=Tokinvest&font=montserrat" alt="tokinvest"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Quetzel&font=playfair" alt="Quetzel"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/140x50/transparent/1e293b?text=Sturgeon&font=oswald" alt="Sturgeon"
-                    class="h-10 md:h-12 w-auto object-contain">
-
-                <!-- Logos (Set 2 Duplicate) -->
-                <img src="https://placehold.co/180x50/transparent/1e293b?text=Goldman+Sachs&font=serif"
-                    alt="Goldman Sachs" class="h-16 md:h-18 w-auto object-contain">
-                <img src="https://placehold.co/100x50/transparent/1e293b?text=20VC&font=montserrat" alt="20VC"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/180x50/transparent/1e293b?text=J.P.+Morgan&font=serif" alt="JP Morgan"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Google&font=roboto" alt="Google"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Amazon&font=lato" alt="Amazon"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/140x50/transparent/1e293b?text=Tokinvest&font=montserrat" alt="tokinvest"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/120x50/transparent/1e293b?text=Quetzel&font=playfair" alt="Quetzel"
-                    class="h-10 md:h-12 w-auto object-contain">
-                <img src="https://placehold.co/140x50/transparent/1e293b?text=Sturgeon&font=oswald" alt="Sturgeon"
-                    class="h-10 md:h-12 w-auto object-contain">
+            <div class="flex gap-16 md:gap-24 animate-[scroll_40s_linear_infinite] w-max items-center">
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Goldman Sachs</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">20VC</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">J.P. Morgan</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Google</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Amazon</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Tokinvest</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Quetzel</span>
+                <span class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Sturgeon</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Goldman Sachs</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">20VC</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">J.P. Morgan</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Google</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Amazon</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Tokinvest</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Quetzel</span>
+                <span aria-hidden="true" class="font-serif text-2xl md:text-3xl text-[#0B1C2E]/55 whitespace-nowrap">Sturgeon</span>
             </div>
         </div>
-
-        <!-- Marquee Keyframes (Custom addition to tailwind config above was simpler, but inline style works for specific overrides) -->
         <style>
-            @keyframes scroll {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-
+            @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
             .mask-gradient {
-                mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-                -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
             }
         </style>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="relative z-10 py-24 px-6 md:px-12">
-        <div class="max-w-4xl mx-auto">
+    <section id="contact" class="relative z-10 bg-[#F4F6F8] py-20 md:py-28 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
 
             <!-- Headline -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#060645] mb-4">Get in Touch with us Today </h2>
-                <p class="text-lg text-[#0e1b2a]">We'd love to hear from you.</p>
+            <div class="md:col-span-5">
+                <h2 class="font-serif text-4xl md:text-6xl text-[#0B1C2E] leading-[1.08] tracking-[-0.01em] mb-6">
+                    Get in Touch with us <span class="italic">Today</span></h2>
+                <p class="text-lg text-slate-600 mb-10">We'd love to hear from you.</p>
+                <div class="border-t border-slate-300 pt-6">
+                    <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#0B1C2E]/60 mb-2">Contact Us</p>
+                    <a href="mailto:abbie@360partners.co"
+                        class="text-lg md:text-xl text-[#0B1C2E] border-b border-[#0B1C2E]/30 hover:border-[#0B1C2E] transition-colors">abbie@360partners.co</a>
+                </div>
             </div>
 
-            <!-- Form Card -->
-            <div class="glass-panel rounded-[2.5rem] p-8 md:p-12 mb-16 relative overflow-hidden group">
-                <!-- Subtle decorative glow inside card -->
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none">
-                </div>
-
-                <form class="clean-form relative z-10 space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
+            <!-- Form -->
+            <div class="md:col-span-6 md:col-start-7">
+                <form class="clean-form space-y-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        <div>
                             <label for="name"
-                                class="text-sm font-semibold text-slate-700 uppercase tracking-wide">Name</label>
+                                class="block text-[11px] font-semibold text-[#0B1C2E]/70 uppercase tracking-[0.2em] mb-3">Name</label>
                             <input type="text" id="name" placeholder="John Doe"
-                                class="w-full px-6 py-4 rounded-xl bg-slate-50 border-0 ring-1 ring-slate-200 focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all outline-none placeholder:text-slate-400">
+                                class="w-full bg-transparent border-0 border-b border-slate-300 px-0 py-3 text-lg text-[#0B1C2E] focus:border-[#0B1C2E] focus:ring-0 outline-none transition-colors placeholder:text-slate-400">
                         </div>
-                        <div class="space-y-2">
+                        <div>
                             <label for="email"
-                                class="text-sm font-semibold text-slate-700 uppercase tracking-wide">Email</label>
+                                class="block text-[11px] font-semibold text-[#0B1C2E]/70 uppercase tracking-[0.2em] mb-3">Email</label>
                             <input type="email" id="email" placeholder="john@example.com"
-                                class="w-full px-6 py-4 rounded-xl bg-slate-50 border-0 ring-1 ring-slate-200 focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all outline-none placeholder:text-slate-400">
+                                class="w-full bg-transparent border-0 border-b border-slate-300 px-0 py-3 text-lg text-[#0B1C2E] focus:border-[#0B1C2E] focus:ring-0 outline-none transition-colors placeholder:text-slate-400">
                         </div>
                     </div>
-
-                    <div class="space-y-2">
+                    <div>
                         <label for="message"
-                            class="text-sm font-semibold text-slate-700 uppercase tracking-wide">Message</label>
+                            class="block text-[11px] font-semibold text-[#0B1C2E]/70 uppercase tracking-[0.2em] mb-3">Message</label>
                         <textarea id="message" rows="4" placeholder="How can we help you?"
-                            class="w-full px-6 py-4 rounded-xl bg-slate-50 border-0 ring-1 ring-slate-200 focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all outline-none placeholder:text-slate-400 resize-none"></textarea>
+                            class="w-full bg-transparent border-0 border-b border-slate-300 px-0 py-3 text-lg text-[#0B1C2E] focus:border-[#0B1C2E] focus:ring-0 outline-none transition-colors placeholder:text-slate-400 resize-none"></textarea>
                     </div>
-
                     <button type="submit"
-                        class="w-full py-5 bg-[#47b599] text-white font-bold rounded-xl shadow-lg shadow-[#46c2a7]/10 hover:bg-[#46c2a7] hover:shadow-[#46c2a7]/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group">
+                        class="group inline-flex items-center gap-3 px-10 py-4 text-xs font-semibold text-white uppercase tracking-[0.2em] bg-[#0B1C2E] hover:bg-[#2FB7A6] transition-colors duration-300">
                         Send Message
-                        <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Torre Style: Minimalist) -->
-    <footer class="bg-white border-t border-slate-100 pt-16 pb-8 px-6 md:px-12 relative z-10 text-[#0E1B2D]">
+    <!-- Footer -->
+    <footer class="bg-[#0B1C2E] pt-16 md:pt-20 pb-10 px-6 md:px-16 relative z-10 text-white">
         <div class="max-w-7xl mx-auto">
-
-            <!-- Top Section -->
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
-                <!-- Left: Logo + Description -->
-                <div class="flex flex-col md:flex-row gap-8 max-w-3xl items-center">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <img src="Logo - black background.png" alt="360 Partners" class="h-28 md:h-32 w-auto">
-                    </div>
-                    <!-- Description -->
-                    <p class="text-sm md:text-base font-medium leading-relaxed opacity-70 text-slate-600 max-w-lg">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-14">
+                <div class="max-w-md">
+                    <img src="logo-white.png" alt="360 Partners" class="h-8 md:h-9 w-auto mb-6">
+                    <p class="text-sm md:text-base leading-relaxed text-white/60">
                         360Partners connects high-growth businesses with exceptional fractional and full-time
-                        professionals
-                        across operations, finance, technology, and strategy.
+                        professionals across operations, finance, technology, and strategy.
                     </p>
                 </div>
-
-                <!-- Right: Contact -->
-                <div class="flex flex-col items-start md:items-end space-y-3 min-w-max">
-                    <h4 class="text-[#2FB7A6] font-bold text-xs tracking-[0.2em] uppercase">
-                        Contact Us
-                    </h4>
+                <div class="flex flex-col items-start md:items-end gap-3">
+                    <h4 class="text-white/60 font-semibold text-[11px] tracking-[0.2em] uppercase">Contact Us</h4>
                     <a href="mailto:abbie@360partners.co"
-                        class="flex items-center gap-3 text-lg md:text-xl font-bold text-[#0e1b2a] hover:text-[#2FB7A6] transition-colors duration-300 group">
-                        abbie@360partners.co
-                    </a>
+                        class="text-lg md:text-xl text-white hover:text-[#5ECFB1] transition-colors duration-300">abbie@360partners.co</a>
                 </div>
             </div>
-
-            <!-- Divider -->
-            <div class="h-px w-full bg-slate-200 mb-8"></div>
-
-            <!-- Bottom Section -->
-            <div
-                class="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500 font-medium">
-                <!-- Left: Links -->
+            <div class="h-px w-full bg-white/15 mb-8"></div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-white/50">
                 <div class="flex flex-wrap gap-6 md:gap-8">
-                    <a href="#" class="hover:text-[#0E1B2D] transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-[#0E1B2D] transition-colors">Cookie Policy</a>
-                    <a href="#" class="hover:text-[#0E1B2D] transition-colors">Privacy Settings</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Settings</a>
                 </div>
-
-                <!-- Right: Copyright -->
-                <div>
-                    &copy; 2025 360Partners Ltd
-                </div>
+                <div>&copy; 2026 360Partners Ltd</div>
             </div>
-
         </div>
     </footer>
 
@@ -412,20 +358,20 @@
     <div id="success-popup"
         class="fixed inset-0 z-[100] flex items-center justify-center px-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <!-- Backdrop -->
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity"></div>
+        <div class="absolute inset-0 bg-[#0B1C2E]/70 backdrop-blur-sm transition-opacity"></div>
 
         <!-- Card -->
         <div
-            class="relative bg-white rounded-[2.5rem] p-10 md:p-14 max-w-md w-full shadow-2xl transform translate-y-10 scale-95 transition-all duration-500 popup-card-content text-center">
+            class="relative bg-white p-10 md:p-14 max-w-md w-full shadow-2xl transform translate-y-10 scale-95 transition-all duration-500 popup-card-content text-center">
 
             <div
-                class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-500/30 text-white">
+                class="w-16 h-16 bg-[#0B1C2E] rounded-full flex items-center justify-center mx-auto mb-8 text-white">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                 </svg>
             </div>
 
-            <h3 class="text-3xl font-bold text-slate-900 mb-4">Thank You!</h3>
+            <h3 class="font-serif text-4xl text-[#0B1C2E] mb-4">Thank You!</h3>
             <p class="text-slate-500 leading-relaxed mb-8">
                 Thank you for connecting with us. We have received your message and will reach out shortly to discuss
                 how we can help you scale.
@@ -439,7 +385,7 @@
             </div>
 
             <button onclick="closePopup()"
-                class="px-8 py-3 bg-slate-100 text-slate-600 font-bold rounded-full hover:bg-slate-200 hover:text-slate-900 transition-colors">
+                class="px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white bg-[#0B1C2E] hover:bg-[#2FB7A6] transition-colors">
                 Close
             </button>
         </div>
@@ -448,7 +394,7 @@
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 
 </html>

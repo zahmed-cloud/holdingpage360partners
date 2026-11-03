@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const confettiContainer = document.getElementById('confetti-container');
-    const colors = ['#00d2ff', '#ff9f43', '#ee5253', '#1dd1a1', '#2f3640', '#f368e0', '#ffeb3b'];
+    const colors = ['#0B1C2E', '#2FB7A6', '#5ECFB1', '#86C5B5', '#C9D6E3'];
     const shapes = ['square', 'rectangle', 'circle', 'triangle', 'line', 'cross'];
 
     function createConfetti() {
@@ -140,9 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial Hide to prevent flash
     gsap.set('.hero-title, .hero-subtitle, .hero-text, .hero-btn', { y: 100, opacity: 0 });
-    gsap.set('#client-hero', { opacity: 0, y: 100 });
-    gsap.set('#trusted-by', { opacity: 0, scale: 0.8 });
-    gsap.set('#contact', { opacity: 0, y: 100 });
+        gsap.set('#trusted-by', { opacity: 0, y: 30 });
+    gsap.set('#contact > div', { opacity: 0, y: 40 });
 
     // 1. HERO ENTRANCE (Staggered & Elastic)
     const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
@@ -151,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .to('.hero-title', { y: 0, opacity: 1, duration: 1.8, delay: 0.2 })
         .to('.hero-subtitle', { y: 0, opacity: 1, duration: 1.5 }, "-=1.4")
         .to('.hero-text', { y: 0, opacity: 1, duration: 1.5 }, "-=1.3")
-        .to('.hero-btn', { y: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.3)" }, "-=1.0");
+        .to('.hero-btn', { y: 0, opacity: 1, duration: 1.2 }, "-=1.0");
 
     // 2. 3D TILT EFFECT (Mouse Parallax)
     const heroCard = document.querySelector('.glass-card');
@@ -180,33 +179,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. SCROLL REVEALS (Client Section)
-    gsap.to('#client-hero', {
-        scrollTrigger: {
-            trigger: '#client-hero',
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        ease: "power3.out"
-    });
-
     // 4. TRUSTED BY (Explosive Pop)
     gsap.to('#trusted-by', {
         scrollTrigger: {
             trigger: '#trusted-by',
             start: "top 85%",
         },
-        scale: 1,
+        y: 0,
         opacity: 1,
-        duration: 1.5,
-        ease: "back.out(1.2)" // Overshoot effect
+        duration: 1.2,
+        ease: "power3.out"
     });
 
     // 5. CONTACT SECTION (Smooth Glide)
-    gsap.to('#contact', {
+    gsap.to('#contact > div', {
         scrollTrigger: {
             trigger: '#contact',
             start: "top 75%",
@@ -215,20 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 1,
         duration: 1.5,
         ease: "power3.out"
-    });
-
-    // 6. MAGNETIC BUTTONS
-    document.querySelectorAll('.hero-btn, .linkedin-btn, button[type="submit"]').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const { left, top, width, height } = btn.getBoundingClientRect();
-            const x = (e.clientX - left - width / 2) * 0.3; // Limit movement
-            const y = (e.clientY - top - height / 2) * 0.3;
-
-            gsap.to(btn, { x: x, y: y, duration: 0.3 });
-        });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
-        });
     });
 
 });
